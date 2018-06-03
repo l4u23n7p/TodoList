@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:TodoList.Converters"
+             x:Class="TodoList.Pages.ItemDetailPage"
+             Title="Item">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Text" FontSize="Medium"/>
+            <Label Text="{Binding Text}" FontSize="Small"/>
+            <Label Text="Description" FontSize="Medium"/>
+            <Label Text="{Binding Description}" FontSize="Small"/>
+            <Button x:Name="Done" Text="Fait" HeightRequest="40" Clicked="BtnDone"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

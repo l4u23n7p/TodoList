@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TodoList.Pages.ItemsPage"
+             Title="Ma TodoList">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Ajouter" Clicked="BtnAddItem" FlexLayout.AlignSelf="End" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="ItemsListView" 
+                VerticalOptions="FillAndExpand"
+                 HasUnevenRows="true" 
+                 IsPullToRefreshEnabled="true"
+                 CachingStrategy="RecycleElement">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Text}" 
+                       LineBreakMode="NoWrap" 
+                       FontSize="16" />
+                                <Label Text="{Binding Description}" 
+                       LineBreakMode="NoWrap"
+                       FontSize="13" />
+                                <Image HorizontalOptions="Center" Source="chek.png" IsVisible="{Binding IsDone}" HeightRequest="30" WidthRequest="30"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

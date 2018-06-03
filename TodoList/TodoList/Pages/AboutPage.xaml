@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TodoList.Pages.AboutPage"
+             Title="A Propos De">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center">
+            <Image Source="prj_ynov.png" HorizontalOptions="Center"/>
+
+            <Label x:Name="Name" Text="TodoList" HorizontalOptions="Center"/>
+            <Label x:Name="Version" Text="1.0.0" HorizontalOptions="Center"/>
+            <Label x:Name="Author" Text="Laurent PANEK" HorizontalOptions="Center"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
