@@ -162,4 +162,16 @@
       <Name>TodoList</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_feed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\prj_ynov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chek.png" />
+  </ItemGroup>
 </Project>

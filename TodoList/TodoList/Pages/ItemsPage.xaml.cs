@@ -12,22 +12,28 @@ using Xamarin.Forms.Xaml;
 
 namespace TodoList.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ItemsPage : ContentPage
-	{
-		public ItemsPage ()
-		{
-			InitializeComponent ();
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ItemsPage : ContentPage
+    {
+        public ItemsPage()
+        {
+            InitializeComponent();
             ItemsListView.ItemsSource = ItemViewModel.TodoItems;
-            ItemsListView.ItemSelected += delegate (object sender, SelectedItemChangedEventArgs args)
-            {
-               Navigation.PushModalAsync(new NavigationPage(new ItemDetailPage(args.SelectedItem as TodoItem)));
-            };
 
             ItemsListView.RefreshCommand = RefreshCommand;
 
+        }
 
-            
+        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        {
+            var item = args.SelectedItem as TodoItem;
+            if (item == null)
+                return;
+
+            await Navigation.PushAsync(new ItemDetailPage(item));
+
+            // Manually deselect item.
+            ItemsListView.SelectedItem = null;
         }
 
         public ICommand RefreshCommand

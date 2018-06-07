@@ -17,6 +17,7 @@ namespace TodoList.Pages
         public NewItem()
         {
             InitializeComponent();
+
         }
 
         public async void BtnSave(object sender, EventArgs e)

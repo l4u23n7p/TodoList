@@ -12,6 +12,7 @@
                 VerticalOptions="FillAndExpand"
                  HasUnevenRows="true" 
                  IsPullToRefreshEnabled="true"
+                 ItemSelected="OnItemSelected"
                  CachingStrategy="RecycleElement">
                 <ListView.ItemTemplate>
                     <DataTemplate>
